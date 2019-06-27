@@ -1,0 +1,15 @@
+CONTENT MANAGEMENT SYSTEM IN PHP
+
+**admin Login Details**
+
+Username: victor
+Password: headadmin
+
+CREATE A DATABASE NAMING "victor/and import the victor.sql"
+
+CREATE A DATABASE NAMING "cms/and import the cms.sql"  
+
+CREATE A DATABASE NAMING "article/and import the article.sql" 
+
+
+
