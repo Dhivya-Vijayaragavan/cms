@@ -1,0 +1,26 @@
+.bg-light {
+    background-color: #8b32e5 !important;
+}
+.navbar-nav li a {
+    color:white !important; 
+    margin-left: 40px;
+}
+.navbar-nav {
+    margin-left: 600px;
+}
+.cls-heading {
+    color:#194f87;
+    margin: 20px 60px;
+}
+.cls-heading img {
+    width:100px;
+}
+.cls-logo {
+    width: 60px;
+    height: 40px;
+}
+.navbar-brand {
+    color:white;
+    font-weight: normal;
+    font-size: 25px;
+}

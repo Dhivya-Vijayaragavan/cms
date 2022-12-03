@@ -1,0 +1,53 @@
+<div class="cls-background">
+    <h2 class="cls-subHead">Company Details</h2>
+    <!-- Company Table Starts -->
+    <table class="cls-table">
+        <!-- Table Header Starts -->
+        <thead>
+            <tr>
+                <th>Company Id</th>
+                <th>Company Name</th>
+                <th>CEO</th>
+                <th>Website URL</th>
+                <th>Stock Price</th>
+                <th>Edit Stock</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <!-- Table Header Ends -->
+        <!-- Table Body Starts -->
+        <tbody>
+            <ng-container *ngIf = "companyList.length > 0; else noData">
+                <tr *ngFor="let data of companyList">
+                    <td><a (click)="navigate(data)">{{data?.id}}</a></td>
+                    <td>{{data?.companyName | titlecase }}</td>
+                    <td>{{data?.companyCeo | titlecase }}</td>
+                    <td>{{data?.companySite}}</td>
+                    <ng-container *ngIf = "data?.latestStockPrice == undefined ; else zeroStock">
+                        <td>0</td>
+                    </ng-container>
+                    <ng-template #zeroStock>
+                        <td>{{data?.latestStockPrice}}</td>
+                    </ng-template>
+                    <td (click) = "editStock(data)">
+                        <button mat-icon-button matTooltip="Edit Stock Price" class="iconbutton" color="primary">
+                            <mat-icon>edit</mat-icon>
+                        </button> 
+                    </td>
+                    <td (click) = "removeData(data?.id)">
+                        <button mat-icon-button matTooltip="Click to Delete" class="iconbutton" color="primary">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </ng-container>
+            <ng-template #noData>
+                <tr>
+                    <td colspan="7">No Data Found!!</td>
+                </tr>
+            </ng-template>
+        </tbody>
+        <!-- Table Body Ends -->
+    </table>
+    <!-- Company Table Ends -->
+</div>

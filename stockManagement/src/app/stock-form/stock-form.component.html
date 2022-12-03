@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+    <h1 mat-dialog-title>Edit Company Stock</h1>
+  </mat-toolbar>
+  
+  <div mat-dialog-content class="p-4">
+    <form class="example-form" [formGroup] = "stockForm">
+      <mat-form-field class="example-full-width p-2">
+        <mat-label>Stock Id</mat-label> 
+        <input matInput type="number" name="stockId" id="stockId" formControlName="stockId">
+        <mat-error *ngIf="submitted && sf.stockId.invalid"> Enter Stock Id</mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width p-2">
+        <mat-label>Stock Name</mat-label> 
+        <input matInput type="text" autocomplete="off" name="stockName" id="stockName" formControlName="stockName">
+        <mat-error *ngIf="submitted && sf.stockName.invalid"> Enter Stock Name</mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width p-2">
+        <mat-label>Stock Price</mat-label>
+        <input matInput type="number" name="stockPrice" id="stockPrice" formControlName="stockPrice"/>
+        <mat-error *ngIf="submitted && sf.stockPrice.invalid"> Enter Stock Price</mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width p-2">
+        <mat-label>Stock Date</mat-label>
+        <input matInput type="datetime-local" name="stockDate" id="stockDate" formControlName="stockDate"/>
+        <mat-error *ngIf="submitted && sf.stockDate.invalid"> Select Stock Data</mat-error>
+      </mat-form-field >
+    </form>
+  </div>
+  <div mat-dialog-action>
+    <button mat-raised-button color="primary" (click)="submitStock()">Submit Stock</button>
+  </div>
+  

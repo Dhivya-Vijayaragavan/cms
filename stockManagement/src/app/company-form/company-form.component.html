@@ -1,0 +1,30 @@
+<div class="cls-background">
+    <div class="cls-form">
+        <div class="cls-form-title">Enter Company Details</div>
+        <!--company form starts-->
+        <form [formGroup] = "companyForm" (ngSubmit) = "submitCompany()">
+            <div class = "row">
+                <div class="col-md-4">
+                    <label class="form-label" for="companyName">Company Name</label>
+                    <input type="text" class="form-control" autocomplete="off" name="companyName" id="companyName" required formControlName = "companyName"/>
+                    <span class="cls-mandatory" *ngIf="submitted && cf.companyName.errors"> Enter the Company Name</span>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="ceo">CEO</label>
+                    <input type="text" class="form-control" autocomplete="off" name="ceo" id="ceo" required formControlName = "ceo"/>
+                    <span class="cls-mandatory" *ngIf="submitted && cf.ceo.errors"> Enter the CEO Name</span>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="websiteLink">Website Url</label>
+                    <input type="url" class="form-control" autocomplete="off" name="websiteLink" id="websiteLink" required formControlName = "websiteLink"/>
+                    <span class="cls-mandatory" *ngIf="submitted && cf.websiteLink.value == '' && cf.websiteLink.errors"> Enter the Website Url</span>
+                    <span class="cls-mandatory" *ngIf="submitted && cf.websiteLink.value != '' && cf.websiteLink.errors"> Enter the Valid Website Url</span>
+                </div>
+            </div>
+            <div class="cls-button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <!--company form ends-->
+    </div>
+</div>

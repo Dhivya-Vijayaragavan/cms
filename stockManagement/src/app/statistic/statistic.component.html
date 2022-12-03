@@ -1,0 +1,22 @@
+<h2 class="cls-subHead">{{statisticData?.companyName|titlecase}} {{ 'Statistical Data' }}</h2>
+<table class = "cls-table"> 
+    <thead>
+        <tr>
+            <th>Minimum</th>
+            <th>Maximum</th>
+            <th>Average</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngIf = "statisticData?.data.length > 0 ; else default">
+            <td>{{statisticData.data | min}}</td>
+            <td>{{statisticData.data | max}}</td>
+            <td>{{statisticData.data | avg  | number : '2.3'}}</td>
+        </tr>
+        <ng-template #default>
+            <tr>
+                <td colspan="3">No Data Found</td>
+            </tr>
+        </ng-template>
+    </tbody>
+</table>

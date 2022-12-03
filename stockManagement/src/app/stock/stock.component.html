@@ -1,0 +1,49 @@
+<div class="cls-background">
+    <ng-container *ngIf = "selectedCompanyName !='' ; else default">
+        <h2 class="cls-subHead">{{selectedCompanyName | titlecase}} {{'Stock Details'}}</h2>
+    </ng-container>
+    <ng-template #default>
+        <h2 class="cls-subHead">Full Stock Details</h2>
+    </ng-template>
+    <!-- Stock Table Starts -->
+    <table class="cls-table">
+        <!-- Table Header Starts -->
+        <thead>
+            <tr>
+                <th>Stock Id</th>
+                <th>Stock Name</th>
+                <th>Company Id</th>
+                <th>Stock price</th>
+                <th>Stock Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <!-- Table Header Ends -->
+        <!-- Table Body Starts -->
+        <tbody>
+            <ng-container *ngIf = "stockList.length > 0; else noData">
+                <tr *ngFor="let stock of stockList">
+                    <td>{{stock?.stockId}}</td>
+                    <td>{{stock?.stockName | titlecase }}</td>
+                    <td>{{stock?.companyId}}</td>
+                    <td>{{stock?.stockPrice}}</td>
+                    <td>{{stock?.stockDate | date :'medium'}}</td>
+                    <td (click) = "removeData(stock)">
+                        <button mat-icon-button matTooltip="Click to Delete" class="iconbutton" color="primary">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </ng-container>
+            <ng-template #noData>
+                <tr>
+                    <td colspan="6">No Data Found!!</td>
+                </tr>
+            </ng-template>
+            
+        </tbody>
+        <!-- Table Body Ends -->
+    </table>
+    <app-statistic [statisticData] = "statisticData"></app-statistic>
+    <!-- Stock Table Ends -->
+</div>
