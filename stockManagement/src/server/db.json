@@ -1,0 +1,96 @@
+{
+  "stock": [
+    {
+      "stockId": 101,
+      "stockName": "Mouse",
+      "stockPrice": 1000,
+      "stockDate": "2022-04-21T22:08",
+      "companyId": 1,
+      "id": 1
+    },
+    {
+      "stockId": 102,
+      "stockName": "Keyboard",
+      "stockPrice": 300,
+      "stockDate": "2022-04-21T22:09",
+      "companyId": 1,
+      "id": 2
+    },
+    {
+      "stockId": 201,
+      "stockName": "Laptop",
+      "stockPrice": 20000,
+      "stockDate": "2022-04-21T22:09",
+      "companyId": 2,
+      "id": 3
+    },
+    {
+      "stockId": 103,
+      "stockName": "Acer Laptop",
+      "stockPrice": 70000,
+      "stockDate": "2022-04-20T01:10",
+      "companyId": 3,
+      "id": 4
+    },
+    {
+      "stockId": 205,
+      "stockName": "Iphone",
+      "stockPrice": 90000,
+      "stockDate": "2022-04-13T03:10",
+      "companyId": 4,
+      "id": 5
+    },
+    {
+      "stockId": 600,
+      "stockName": "Laptop",
+      "stockPrice": 9000,
+      "stockDate": "2022-04-22T22:22",
+      "companyId": 5,
+      "id": 6
+    },
+    {
+      "stockId": 56,
+      "stockName": "dfsd",
+      "stockPrice": 34,
+      "stockDate": "2022-04-16T00:25",
+      "companyId": 6,
+      "id": 7
+    }
+  ],
+  "company": [
+    {
+      "companyName": "Infiniti",
+      "companyCeo": "Ananth",
+      "companySite": "https://infinit.com",
+      "id": 1
+    },
+    {
+      "companyName": "Infosys",
+      "companyCeo": "Salil",
+      "companySite": "https://infosys.com",
+      "id": 2,
+      "latestStockPrice": 20000
+    },
+    {
+      "companyName": "Cognizant",
+      "companyCeo": "Brian",
+      "companySite": "https://cts.com",
+      "id": 3,
+      "latestStockPrice": 70000
+    },
+    {
+      "companyName": "TCS",
+      "companyCeo": "Rajesh",
+      "companySite": "https://tcs.com",
+      "id": 4,
+      "latestStockPrice": 90000
+    },
+    {
+      "companyName": "Accenture",
+      "companyCeo": "Julie Sweet",
+      "companySite": "https://accenture.com",
+      "id": 5,
+      "latestStockPrice": 9000
+    }
+  ]
+}
